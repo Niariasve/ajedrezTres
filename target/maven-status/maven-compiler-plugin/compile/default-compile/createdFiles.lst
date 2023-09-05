@@ -1,0 +1,12 @@
+ec\edu\espol\ajedreztres\App.class
+ec\edu\espol\ajedreztres\Run.class
+ec\edu\espol\model\Rey.class
+ec\edu\espol\model\Caballo.class
+ec\edu\espol\model\Torre.class
+module-info.class
+ec\edu\espol\model\Pieza.class
+ec\edu\espol\model\Reina.class
+ec\edu\espol\model\Posicion.class
+ec\edu\espol\model\Alfil.class
+ec\edu\espol\controllers\TableroController.class
+ec\edu\espol\model\Peon.class
