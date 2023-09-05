@@ -46,18 +46,18 @@ public class TableroController implements Initializable {
 
     private ArrayList<Posicion> movimientos = null;
     
-    private static String peonBlanco = "src\\main\\resources\\fichas\\peonBlanco.png";
-    private static String peonNegro = "src\\main\\resources\\fichas\\peonNegro.png";
-    private static String reinaBlanca = "src\\main\\resources\\fichas\\reinaBlanca.png";
-    private static String reinaNegra = "src\\main\\resources\\fichas\\reinaNegra.png";
-    private static String reyBlanco = "src\\main\\resources\\fichas\\reyBlanco.png";
-    private static String reyNegro = "src\\main\\resources\\fichas\\reyNegro.png";
-    private static String torreBlanca = "src\\main\\resources\\fichas\\torreBlanca.png";
-    private static String torreNegra = "src\\main\\resources\\fichas\\torreNegra.png";
-    private static String caballoBlanco = "src\\main\\resources\\fichas\\caballoBlanco.png";
-    private static String caballoNegro = "src\\main\\resources\\fichas\\caballoNegro.png";
-    private static String alfilBlanco = "src\\main\\resources\\fichas\\alfilBlanco.png";
-    private static String alfilNegro = "src\\main\\resources\\fichas\\alfilNegro.png";
+    private static String peonBlanco = "peonBlanco.png";
+    private static String peonNegro = "peonNegro.png";
+    private static String reinaBlanca = "reinaBlanca.png";
+    private static String reinaNegra = "reinaNegra.png";
+    private static String reyBlanco = "reyBlanco.png";
+    private static String reyNegro = "reyNegro.png";
+    private static String torreBlanca = "torreBlanca.png";
+    private static String torreNegra = "torreNegra.png";
+    private static String caballoBlanco = "caballoBlanco.png";
+    private static String caballoNegro = "caballoNegro.png";
+    private static String alfilBlanco = "alfilBlanco.png";
+    private static String alfilNegro = "alfilNegro.png";
     
     private boolean jugadorActual; //Blancas = false y Negras = true
     
@@ -184,14 +184,13 @@ public class TableroController implements Initializable {
     
     ImageView cargarImagen(String url) {
         try {
-            FileInputStream in = new FileInputStream(url);
-            Image im = new Image(in);
+            Image im= new Image(App.class.getResourceAsStream("imgs/"+url));
             ImageView iv = new ImageView();
             iv.setImage(im);
             iv.setFitHeight(75);
             iv.setFitWidth(75);
             return iv;
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             System.out.println("No archivo existe");
         }
         return null;
